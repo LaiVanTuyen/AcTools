@@ -35,3 +35,11 @@ The project uses the following dependencies:
    ```sh
    git clone https://github.com/yourusername/AcTools.git
    cd AcTools
+   
+## Build jar, exe
+1. **Build jar:**
+   ```sh
+   java --module-path "C:\SetUp\Java\javafx-sdk-21.0.6/lib" --add-modules javafx.controls,javafx.fxml -jar target/AcTools-1.0-SNAPSHOT.jar
+2. **Build exe:**
+   ```sh
+   jpackage --name AcTools --input target/ --main-jar AcTools-1.0-SNAPSHOT.jar --main-class com.vti.tuyn.actools.AcToolsApplication --type exe --module-path       "C:\SetUp\Java\javafx-sdk-21.0.6/lib" --add-modules javafx.controls,javafx.fxml --win-console
